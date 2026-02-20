@@ -324,7 +324,7 @@ These scenarios allow step-by-step verification of:
 
 ---
 
-This controlled setup ensures deterministic testing of the fractional raster–vector clipping operator before applying it to large-scale datasets.
+This controlled setup ensures deterministic testing of the fractional raster–vector clipping operator before applying it to large-scale datasets. 
 
 ```
 
