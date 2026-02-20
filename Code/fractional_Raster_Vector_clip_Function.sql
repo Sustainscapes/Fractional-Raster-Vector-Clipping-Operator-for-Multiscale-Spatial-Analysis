@@ -1,3 +1,4 @@
+
 CREATE OR REPLACE FUNCTION raster_fractional_clip_modela(
     rast        raster,
     geom        geometry,
