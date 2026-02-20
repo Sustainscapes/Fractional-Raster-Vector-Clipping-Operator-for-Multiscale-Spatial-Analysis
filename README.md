@@ -40,30 +40,6 @@ The operator defines pixel contribution based on **proportional areal overlap**,
 
 
 
----
-
-## Requirements
-
-- PostgreSQL ≥ 13
-- PostGIS ≥ 3
-- Raster-enabled PostGIS installation
-- Sufficient memory for raster processing
-
----
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/fractional_polygon_raster_clip.git
-
-
-
-
-Here is a clean, well-structured Markdown section for **Installation** and **Usage**, suitable for your README. It keeps things simple and does not include the function code itself.
-
----
 
 ````markdown
 ## Installation
@@ -88,7 +64,7 @@ SELECT PostGIS_Version();
 
 ```bash
 git clone https://github.com/yourusername/fractional_polygon_raster_clip.git
-cd fractional_polygon_raster_clip
+cd Code
 ```
 
 2. Connect to your PostgreSQL database and execute the SQL file containing the function:
@@ -193,9 +169,4 @@ Excluded pixels are set to NULL in both bands.
 * Performance is optimized by restricting intersection computation to boundary pixels only.
 * The function is `IMMUTABLE` and `PARALLEL SAFE`.
 
-```
-
 ---
-
-If you'd like, I can also add a short section explaining how to compute weighted area summaries using the weight band.
-```
