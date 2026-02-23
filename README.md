@@ -246,13 +246,11 @@ INSERT INTO test_geom (geom) VALUES
 (ST_GeomFromText('POLYGON((1.0 3.0, 3.5 3.0, 3.5 1.0, 1.0 1.0, 1.0 3.0))', 3857)),
 
 -- #5: Sub-pixel offset
-(ST_GeomFromText('POLYGON((0.25 4.75, 0.75 4.75, 0.75 4.25, 0.25 4.25, 0.25 4.75))', 3857));
-```
+(ST_GeomFromText('POLYGON((0.25 4.75, 0.75 4.75, 0.75 4.25, 0.25 4.25, 0.25 4.75))', 3857)),
 
 -- #6: 
 (ST_GeomFromText('POLYGON((0.0 4.0, 3 4.0, 4 3, 4.5 2.5, 3 1, 0 1, 0 4))', 3857));
 ```
-
 -- #7: 
 (ST_GeomFromText('POLYGON((1 4.5, 4 4.5, 4.5 3.5, 4.25 2.25, 1 2.25, 1 4.5))', 3857));
 ```
