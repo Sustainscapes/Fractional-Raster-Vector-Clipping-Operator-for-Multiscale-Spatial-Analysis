@@ -1,5 +1,3 @@
------ Correct Function --------
-
 CREATE OR REPLACE FUNCTION raster_fractional_boundary_clip(
     rast        raster,
     geom        geometry,
@@ -64,14 +62,16 @@ BEGIN
     END IF;
 
     ------------------------------------------------------------
-    -- 4. Strict polygon clip (center rule baseline)
+    -- 4. polygon clip (Touched=TRUE)
     ------------------------------------------------------------
-    rast_out := ST_Clip(
-        rast_env,
-        geom_proj,
-        NULL::double precision,
-        TRUE
-    );
+
+	rast_out := ST_Clip(
+    rast_env,
+    geom_proj,
+    NULL::double precision[],
+	crop => TRUE,
+    touched => TRUE
+);
 
     IF rast_out IS NULL THEN
         RETURN NULL;
@@ -162,8 +162,5 @@ BEGIN
 
 END;
 $$;
-
-
-
 
 
